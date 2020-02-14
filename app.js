@@ -90,7 +90,7 @@ document.querySelector(".btn-hold").addEventListener("click", function() {
       scores[activePlayer];
   
     // Уг тоглогч хожсон эсэхийг (оноо нь 100-с их эсэх) шалгах
-    if (scores[activePlayer] >= 10) {
+    if (scores[activePlayer] >= 100) {
       isGameOver= true;
       // Ялагч гэсэн текстийг нэрнийх нь оронд гаргана
       document.getElementById("name-" + activePlayer).textContent = "WINNER!!!";
