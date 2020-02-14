@@ -16,7 +16,7 @@ var roundScore = 0;
 
 
 //Шооны аль талаараа буусныг хадгалагч, 1-6 хүртэлх шоог аль талаараа буухыг хадгална.
-var dice = Math.floor(Math.random()*6)+1;
+
 
 
 //<div class="player-score" id="score-0">43</div>
@@ -29,18 +29,23 @@ var dice = Math.floor(Math.random()*6)+1;
 
 
 //Програм эхлэхэд бэлтгэх
-document.querySelector("#score-0").textContent= 0;
-document.querySelector("#score-1").textContent= 0;
 
-document.querySelector("#current-0").textContent=10;
-document.querySelector("#current-1").textContent=5;
+document.getElementById("score-0").textContent= 0;
+document.getElementById("score-1").textContent= 0;
+
+document.getElementById("current-0").textContent=0;
+document.getElementById("current-1").textContent=0;
 
 document.querySelector(".dice").style.display="none";
 
-console.log("Шоо " + dice);
 
-
-
+var diceDom = document.querySelector(".dice");
 //Шоог шид
 
-document.querySelector(".btn-roll").
+document.querySelector(".btn-roll").addEventListener("click", 
+function (){
+    var diceNumber = Math.floor(Math.random()*6)+1;
+    diceDom.style.display="block";
+    diceDom.src="dice-"+diceNumber+".png";
+});
+
